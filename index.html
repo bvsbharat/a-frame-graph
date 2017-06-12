@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<script src="https://aframe.io/releases/0.3.0/aframe.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.17/d3.min.js"></script>
+<script src="./lib/aframe-bmfont-text-component.min.js"></script>
+<script src="./lib/hidden.aframe-scatter-component.js"></script>
+<script src="./lib/aframe-mouse-cursor-component.min.js"></script>
+<script src="./lib/aframe-orbit-controls-component.min.js"></script>
+<a-scene >
+
+<!-- CAMERA START --> 
+	<a-entity
+        id="camera"
+        camera
+        position="0 5 5"
+        orbit-controls="
+            autoRotate: false;
+            target: #plot1;
+            enabled: true;
+            enableDamping: true;
+            enablePan: true;
+            dampingFactor: 0.125;
+            rotateSpeed:0.25;
+            minDistance:0;
+            maxDistance:100;"
+        mouse-cursor="">
+    </a-entity>
+<!-- CAMERA ENDS -->
+
+
+  <!-- Title -->
+  <a-entity position="-0.8 2.72 -0.49" rotation="" scale="" visible="">
+    <a-entity bmfont-text="text: Scatterplot Reports " position="" rotation="" scale="" visible=""></a-entity>
+  </a-entity>
+
+  <!-- Legend -->
+  <a-entity position="-2.5 1 1" scale="0.8 0.8 0.8">
+    <a-entity bmfont-text="text: BTA">
+      <a-sphere radius="0.03" color="red" position="-0.1 0.05 0"></a-sphere>
+    </a-entity>
+    <a-entity bmfont-text="text: Manager" position="0 0.5 0">
+      <a-sphere radius="0.03" color="blue" position="-0.1 0.05 0"></a-sphere>
+    </a-entity>
+    <a-entity bmfont-text="text: Consutant" position="0 1 0">
+      <a-sphere radius="0.03" color="green" position="-0.1 0.05 0"></a-sphere>
+    </a-entity>
+  </a-entity>
+
+  <!-- Graph -->
+  <a-entity id="plot1" position="0 0.5 0"
+            graph="csv:iris.csv;
+            width: 2;
+            height: 2;
+            depth: 2">
+  </a-entity>
+
+	<a-sky src="img/HMD-Lab-Pano-Small.jpg" ></a-sky>
+</a-scene>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <script src="https://aframe.io/releases/0.5.0/aframe.min.js"></script>
+    <script src="https://unpkg.com/aframe-animation-component@3.2.1/dist/aframe-animation-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-particle-system-component@1.0.x/dist/aframe-particle-system-component.min.js"></script>
+    <script src="https://unpkg.com/aframe-outline@%5E1.1.0/build/aframe-outline.min.js"></script>
+    <script>
+      AFRAME.registerComponent('handle-events', {
+        init: function () {
+          var el = this.el;  // <a-box>
+          el.addEventListener('mouseenter', function () {
+            el.setAttribute('color', '#24CAFF');  
+          });
+          el.addEventListener('mouseleave', function () {
+            el.setAttribute('color', '#EF2D5E');  
+          });
+          el.addEventListener('click', function () {
+            el.setAttribute('scale', {x: 2, y: 1, z: 2});
+          });
+        } 
+      });
+    </script>
+    </head>
+    <body>
+       <a-scene>
+        <a-entity id="lightSphere" geometry="primitive: sphere; radius: 0.2" material="shader: flat" light="type: point; color: #FFF" position="-4 3 -4"
+               animation="property: position; to: 4 2.8 -4; dir: alternate; loop: true"></a-entity>
+          
+            <!--<a-entity particle-system="preset: snow; particleCount: 10000"></a-entity>
+               <a-entity particle-system="preset: default; color: #515; particleCount: 1000" position="0 0 -5"></a-entity>-->
+
+          <a-entity position="1 1 -2" rotation="0 0 0">
+             
+                <a-entity id="sphere"  geometry="primitive: sphere; radius: 1.25" material="color: #EF2D5E" position="0 1.25 -5"
+                handle-events></a-entity>
+                    
+                </a-sphere>
+                <!--<a-cylinder position="0 0.75 -3" rotation="0 0 0" radius="0.5" height="1.5" color="#FFC65D"></a-cylinder>-->
+            
+                <a-plane position="0 0 -4" src="plane.jpg" rotation="-90 0 0" width="4" height="4" color="#7BC8A4"  ></a-plane>
+            </a-entity >
+            <a-sky src="demo.jpg" ></a-sky>
+                  <!-- Camera + cursor. -->
+      <a-camera>
+        <a-cursor id="cursor"></a-cursor>
+      </a-camera>
+    </a-scene>
+    </body>
+</html>
