@@ -4,3 +4,7 @@ Id,compensation,willWork,totalFI,PetalWidth,Species,name
 3,2.0,3.0,1.4,900,Consultant,ram
 4,0,0,0,500,Consultant,test
 5,1.0,1.0,1.0,600,Consultant,test
+1,5.0,5.0,5.0,1200.0,BTA,test
+2,2.1,3.5,3.4,1100,BTA,bharat
+3,2.0,3.0,2.4,900,BTA,ram
+5,1.0,1.0,1.0,600,Manager,test
