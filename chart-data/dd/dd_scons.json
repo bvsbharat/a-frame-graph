@@ -10,7 +10,10 @@
    "x": 4,
    "y": 10,
    "z": 2,
-   "s": 1.67
+    "s": 4,
+     "empDetails":{
+         "name":" scon Yagna Narayana"
+     }
  },
  {
    "x": 9.25,
