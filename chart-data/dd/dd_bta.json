@@ -5,7 +5,7 @@
    "y": 0,
    "z": 0,
    "s": 0,
-        "EmpDetails":{
+        "empDetails":{
          "name":"ram kumar"
       }
  },
@@ -13,8 +13,8 @@
    "x": 10,
    "y": 9,
    "z": 2,
-   "s": 1.76,
-        "EmpDetails":{
+   "s": 7,
+        "empDetails":{
          "name":"Bharat kumar"
       }
  },
@@ -23,7 +23,7 @@
    "y": 7.77,
    "z": 5,
    "s": 0.58,
-        "EmpDetails":{
+        "empDetails":{
          "name":"ram kumar"
       }
  },
