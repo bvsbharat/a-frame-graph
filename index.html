@@ -30,22 +30,107 @@
 
   <!-- Title -->
   <a-entity position="-1 3.2 -1.2" rotation="" scale="" visible="">
-    <a-entity bmfont-text="text: Scatterplot Reports " position="" rotation="" scale="" visible=""></a-entity>
+    <a-entity id="title" bmfont-text="text: Scatterplot Reports of DD" position="-0.20 0 0" rotation="" scale="" visible=""></a-entity>
   </a-entity>
+
+
+  <a-entity position="-1.5 -0.32 1.77" scale="0.8 0.8 0.8">
+
+    <a-entity id="dd" class="lineOfBusiness"  bmfont-text="text: DD">
+      <a-sphere radius="0.08" color="#fff" position="-0.15 0.05 0"></a-sphere>
+    </a-entity>
+
+    <a-entity id="ams" class="lineOfBusiness"  bmfont-text="text: AMS " position="1 0 0">
+      <a-sphere radius="0.08" color="#000" position="-0.15 0.05 0"></a-sphere>
+    </a-entity>
+
+    <a-entity id="aim" class="lineOfBusiness" bmfont-text="text:  AIM " position="2 0 0">
+      <a-sphere radius="0.08" color="#000" position="-0.15 0.05 0"></a-sphere>
+    </a-entity>
+
+     <a-entity id="sap" class="lineOfBusiness"  bmfont-text="text:  SAP" position="3 0 0">
+      <a-sphere radius="0.08" color="#000" position="-0.15 0.05 0"></a-sphere>
+    </a-entity>
+
+    <a-entity id="si"  class="lineOfBusiness" bmfont-text="text:  SI" position="4 0 0">
+      <a-sphere radius="0.08" color="#000" position="-0.15 0.05 0"></a-sphere>
+    </a-entity>
+
+  </a-entity>
+
 
   <!-- Legend -->
-  <a-entity position="-2.5 1 1" scale="0.8 0.8 0.8">
-    <a-entity bmfont-text="text: BTA">
-      <a-sphere radius="0.03" color="red" position="-0.1 0.05 0"></a-sphere>
+  <a-entity position="-3 1 2" scale="0.8 0.8 0.8">
+    <a-entity id="bta"  class="empType" bmfont-text="text: BTA">
+      <a-sphere radius="0.08" color="#fe4a49" position="-0.15 0.05 0"></a-sphere>
     </a-entity>
-    <a-entity bmfont-text="text: Manager" position="0 0.5 0">
-      <a-sphere radius="0.03" color="blue" position="-0.1 0.05 0"></a-sphere>
+
+    <a-entity id="cons" class="empType" bmfont-text="text: Consultant " position="0 0.5 0">
+      <a-sphere radius="0.08" color="#2ab7ca" position="-0.15 0.05 0"></a-sphere>
     </a-entity>
-    <a-entity bmfont-text="text: Consultant " position="0 1 0">
-      <a-sphere radius="0.03" color="green" position="-0.1 0.05 0"></a-sphere>
+
+    <a-entity id="scons" class="empType" bmfont-text="text: Senior Consultant " position="0 1 0">
+      <a-sphere radius="0.08" color="#fed766" position="-0.15 0.05 0"></a-sphere>
     </a-entity>
+
+     <a-entity id="managers" class="empType"  bmfont-text="text: Manager" position="0 1.5 0">
+      <a-sphere radius="0.08" color="#FF9800" position="-0.15 0.05 0"></a-sphere>
+    </a-entity>
+
   </a-entity>
 
+
+      <!-- AXIS -->
+<a-entity position="-1.3 0.25 1.25" >
+<a-entity position="0.25 0 0" bmfont-text="text: 1"></a-entity>
+<a-entity position="0.5 0 0" bmfont-text="text: 2"></a-entity>
+<a-entity position="0.75 0 0" bmfont-text="text: 3"></a-entity>
+<a-entity position="1 0 0" bmfont-text="text: 4"></a-entity>
+<a-entity position="1.25 0 0" bmfont-text="text: 5"></a-entity>
+<a-entity position="1.5 0 0" bmfont-text="text: 6"></a-entity>
+<a-entity position="1.75 0 0" bmfont-text="text: 7"></a-entity>
+<a-entity position="2 0 0" bmfont-text="text: 8"></a-entity>
+<a-entity position="2.25 0 0" bmfont-text="text: 9"></a-entity>
+<a-entity position="2.5 0 0" bmfont-text="text: 10"></a-entity>
+</a-entity>
+<a-entity position="-1.25 0.45 1.50" rotation="0 90 0">
+<a-entity position="0 0.25 0" bmfont-text="text: 1"></a-entity>
+<a-entity position="0 0.5 0" bmfont-text="text: 2"></a-entity>
+<a-entity position="0 0.75 0" bmfont-text="text: 3"></a-entity>
+<a-entity position="0 1 0" bmfont-text="text: 4"></a-entity>
+<a-entity position="0 1.25 0" bmfont-text="text: 5"></a-entity>
+<a-entity position="0 1.5 0" bmfont-text="text: 6"></a-entity>
+<a-entity position="0 1.75 0" bmfont-text="text: 7"></a-entity>
+<a-entity position="0 2 0" bmfont-text="text: 8"></a-entity>
+<a-entity position="0 2.25 0" bmfont-text="text: 9"></a-entity>
+<a-entity position="0 2.5 0" bmfont-text="text: 10"></a-entity>
+</a-entity>
+
+<a-entity position="1.36 0.45 -1.27" rotation="0 0 0">
+<a-entity position="0 0.25 0" bmfont-text="text: 1"></a-entity>
+<a-entity position="0 0.5 0" bmfont-text="text: 2"></a-entity>
+<a-entity position="0 0.75 0" bmfont-text="text: 3"></a-entity>
+<a-entity position="0 1 0" bmfont-text="text: 4"></a-entity>
+<a-entity position="0 1.25 0" bmfont-text="text: 5"></a-entity>
+<a-entity position="0 1.5 0" bmfont-text="text: 6"></a-entity>
+<a-entity position="0 1.75 0" bmfont-text="text: 7"></a-entity>
+<a-entity position="0 2 0" bmfont-text="text: 8"></a-entity>
+<a-entity position="0 2.25 0" bmfont-text="text: 9"></a-entity>
+<a-entity position="0 2.5 0" bmfont-text="text: 10"></a-entity>
+</a-entity>
+
+<a-entity position="1.34 0.25 1.25" rotation="0 90 0">
+<a-entity position="0.25 0 0" bmfont-text="text: 1"></a-entity>
+<a-entity position="0.5 0 0" bmfont-text="text: 2"></a-entity>
+<a-entity position="0.75 0 0" bmfont-text="text: 3"></a-entity>
+<a-entity position="1 0 0" bmfont-text="text: 4"></a-entity>
+<a-entity position="1.25 0 0" bmfont-text="text: 5"></a-entity>
+<a-entity position="1.5 0 0" bmfont-text="text: 6"></a-entity>
+<a-entity position="1.75 0 0" bmfont-text="text: 7"></a-entity>
+<a-entity position="2 0 0" bmfont-text="text: 8"></a-entity>
+<a-entity position="2.25 0 0" bmfont-text="text: 9"></a-entity>
+<a-entity position="2.5 0 0" bmfont-text="text: 10"></a-entity>
+</a-entity>
   <!-- Graph -->
   <a-entity id="plot1" position="0 0.5 0"
             graph="csv:iris.csv;
@@ -53,6 +138,5 @@
             height: 2.5;
             depth: 2.5">
   </a-entity>
-
-	<a-sky src="img/bg3.jpg" ></a-sky>
+	<a-sky src="img/bg1.jpg" ></a-sky>
 </a-scene>

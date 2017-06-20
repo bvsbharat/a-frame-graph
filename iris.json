@@ -5,13 +5,17 @@
    "y": 0,
    "z": 0,
    "s": 0,
-      "name":"man"
+      "EmpDetails":{
+         "name":"man"
+      }
  },
  {
    "x": 8.22,
    "y":2,
    "z": 3,
    "s": 5,
-     "name":"BTA srikanth"
+       "EmpDetails":{
+         "name":"ram kumar"
+      }
  }
     ]
