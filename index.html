@@ -5,7 +5,7 @@
 <script src="./lib/aframe-bmfont-text-component.min.js"></script>
 <script src="./lib/hidden.aframe-scatter-component.js"></script>
 <script src="./lib/aframe-mouse-cursor-component.min.js"></script>
-<script src="./lib/aframe-orbit-controls-component.min.js"></script>
+<!--<script src="./lib/aframe-orbit-controls-component.min.js"></script>-->
 
 <body>
 
@@ -14,21 +14,7 @@
 <a-scene >
 
 <!-- CAMERA START --> 
-	<a-entity
-        id="camera"
-        camera
-        position="0 5 5"
-        orbit-controls="
-            autoRotate: false;
-            target: #plot1;
-            enabled: true;
-            enableDamping: true;
-            enablePan: true;
-            dampingFactor: 0.125;
-            rotateSpeed:0.25;
-            minDistance:0;
-            maxDistance:100;"
-        mouse-cursor="">
+	<a-entity camera look-controls>
         <a-cursor id="cursor"
           animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
           animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
