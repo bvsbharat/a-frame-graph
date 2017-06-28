@@ -21,11 +21,11 @@
           event-set__1="_event: mouseenter; color: springgreen"
           event-set__2="_event: mouseleave; color: black"
           fuse="true"
-          raycaster="objects: .link"></a-cursor>
+          raycaster="objects: .link"  position="0 0 -1" material="color: black; shader: flat"></a-cursor>
     </a-camera>
 <!-- CAMERA ENDS -->
 
-
+<a-entity position="0 0 -6" rotation="0 0 0">
   <!-- Title -->
   <a-entity position="-1 3.2 -1.2" rotation="" scale="" visible="">
     <a-entity id="title" bmfont-text="text: Scatterplot Reports of DD" position="-0.20 0 0" rotation="" scale="" visible=""></a-entity>
@@ -136,7 +136,9 @@
             height: 2.5;
             depth: 2.5">
   </a-entity>
-	<a-sky color="#ECECEC"></a-sky>
+
+</a-entity>
+	<a-sky color="#eee"></a-sky>
 </a-scene>
 
 </body>
