@@ -6,6 +6,7 @@
 <script src="./lib/hidden.aframe-scatter-component.js"></script>
 <script src="./lib/aframe-mouse-cursor-component.min.js"></script>
 <!--<script src="./lib/aframe-orbit-controls-component.min.js"></script>-->
+<script src="./lib/aframe-gamepad-controls.js"></script>
 
 <body>
 
@@ -14,7 +15,7 @@
 <a-scene >
 
 <!-- CAMERA START --> 
-	<a-camera look-controls wasd-controls="look-enabled: true">
+	<a-camera gamepad-controls="movementEnabled: true;" look-controls wasd-controls="look-enabled: true">
         <a-cursor id="cursor"
           animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
           animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
@@ -23,7 +24,21 @@
           fuse="true"
           raycaster="objects: .link"  position="0 0 -1" material="color: black; shader: flat"></a-cursor>
     </a-camera>
+
+    <a-entity id="mainCam" camera="active:true;userHeight: 1" wasd-controls="enabled:true" kinematic-body="true" fence="width: 195; depth: 10; x0: 0; z0: -70" gamepad-controls="movementEnabled: true;" universal-controls="movementEnabled: true" position="0 1 20"
+            >
+            <!-- CURSOR STARTS -->
+            <a-cursor id="cursor"
+          animation__click="property: scale; startEvents: click; from: 0.1 0.1 0.1; to: 1 1 1; dur: 150"
+          animation__fusing="property: fusing; startEvents: fusing; from: 1 1 1; to: 0.1 0.1 0.1; dur: 1500"
+          event-set__1="_event: mouseenter; color: springgreen"
+          event-set__2="_event: mouseleave; color: black"
+          fuse="true"
+          raycaster="objects: .link"  position="0 0 -1" material="color: black; shader: flat"></a-cursor>
+            <!-- CURSOR ENDS -->
+        </a-entity>
 <!-- CAMERA ENDS -->
+
 
 <a-entity position="0 0 -6" rotation="0 0 0">
   <!-- Title -->
